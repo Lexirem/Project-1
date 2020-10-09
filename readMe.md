@@ -8,7 +8,7 @@ SlimuAnime was developed using JavaScript as part of the [Ironhack](https://www.
 
 The **MVP** will cover the following:
 
-- **Homepage:** The homepage will present the general Top 10 and the different genres you can choose, which gives you the Top 10 about that category.	
+- **Homepage:** The homepage will present the general Top 10 and the different genres you can choose, which gives you the Top 10 about that category.	For now, search for 
 - **One Anime:** Once you "click" one anime, you get the image and a description about it.
 - **FAQ:** Information about anime and their origin.
 - **Signup:** A registration form for new users.
@@ -16,7 +16,7 @@ The **MVP** will cover the following:
 
 ## Backlog
 
-- 
+- Search by category
 - 
 - 
 
@@ -43,7 +43,7 @@ The **MVP** will cover the following:
 
 
 ## WireFrames	
-
+<img src=""/>
 ![image-20201009132613015](/Users/meritxell.vallri/Library/Application Support/typora-user-images/image-20201009132613015.png)
 
 ## Links
@@ -58,8 +58,8 @@ The **MVP** will cover the following:
 
 ### Kitsu
 
-[API Library](https://github.com/pheyvaer/kitsu-tutorial/blob/master/index.md)
+[API InfoApi](https://github.com/pheyvaer/kitsu-tutorial/blob/master/index.md)
 
 [API Directory](https://kitsu.io/api/edge/anime)
 
-[API Ideas](https://github.com/hummingbird-me)
+[API IdeasAndMore](https://github.com/hummingbird-me)
