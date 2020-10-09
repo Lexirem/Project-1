@@ -42,8 +42,8 @@ The **MVP** will cover the following:
 
 
 ## WireFrames	
-<img src=""/>
-![image-20201009132613015](/Users/meritxell.vallri/Library/Application Support/typora-user-images/image-20201009132613015.png)
+<img src="./img/Screenshot 2020-10-09 at 18.26.43.png"/>
+
 
 ## Links
 
