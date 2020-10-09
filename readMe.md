@@ -58,6 +58,8 @@ The **MVP** will cover the following:
 
 ### Kitsu
 
-[API Description](https://spoonacular.com/application/frontend/downloads/spoonacular-api-slides.pdf)
+[API Library](https://github.com/pheyvaer/kitsu-tutorial/blob/master/index.md)
 
-[API Documentation](https://spoonacular.com/food-api/docs)
+[API Directory](https://kitsu.io/api/edge/anime)
+
+[API Ideas](https://github.com/hummingbird-me)
