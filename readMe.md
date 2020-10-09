@@ -36,9 +36,8 @@ The **MVP** will cover the following:
     - User.js
     - Validator.js
     - kitsuApi.js
-  - assets/
-    - img/
-    - fonts/
+  - img/
+    
 
 
 
