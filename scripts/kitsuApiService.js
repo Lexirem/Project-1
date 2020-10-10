@@ -1,12 +1,12 @@
 'use strict';
 // pendiente de modificar
-// function getAnimes () {
+function getAnimes () {
 
-//   const section = document.querySelector(".anime-list");
+  const section = document.querySelector(".anime-list");
 
 
-//   for (let i = 0; i < 21; i++) {
-//     // cada pokemon lleva su propio indice
+  for (let i = 0; i <= 10; i++) {
+//     // cada anime tiene toda la info necesaria
 //     // tenemos que añadir el indice al fin de URL de la API
 //     fetch(`${i + 1}`)
 //       .then((response) => {
@@ -49,6 +49,7 @@
       
 //     }
 //   }
-// }
+}
+}
 
 // getAnimesAA();

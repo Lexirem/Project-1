@@ -1,0 +1,15 @@
+nav-container{
+    display: flex;
+    position: fixed;
+    background-color: rgba(0, 191, 255, 50%);
+    
+}
+
+
+search-bar{
+    display: flex;
+    border: solid;
+    padding: 10px;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
