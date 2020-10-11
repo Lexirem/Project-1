@@ -1,12 +1,20 @@
-nav-container{
+.nav-container{
     display: flex;
     position: fixed;
     background-color: rgba(0, 191, 255, 50%);
-    
+}
+.navbar-brand{
+    background-color: white;
+}
+#nav-menu{
+    display: flex;
+    position: fixed;
+    background-color: rgba(0, 191, 255, 50%);
+      
 }
 
 
-search-bar{
+.search-bar{
     display: flex;
     border: solid;
     padding: 10px;
