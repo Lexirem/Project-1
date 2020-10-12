@@ -1,23 +1,50 @@
-.nav-container{
+ /* barra navegacion */
+ nav{
+     width: 100%;
+ }
+ .nav-container{ 
     display: flex;
-    position: fixed;
     background-color: rgba(0, 191, 255, 50%);
-}
+    justify-content: space-between;
+ } 
 .navbar-brand{
-    background-color: white;
-}
-#nav-menu{
-    display: flex;
-    position: fixed;
-    background-color: rgba(0, 191, 255, 50%);
-      
+    width: 90px; 
 }
 
+#nav-menu{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    list-style: none;
+}
+#nav-menu li{
+    margin-left: 10px;
+}
+
+/*cuerpo principal */
+main{
+    display: flex;
+    padding: 10%;
+}
+
+.topnav{
+    float: right;
+    padding: 5px;
+    border: 1px solid dodgerblue;
+    border-radius: 15px;
+    margin: 8px;
+    font-size: 17px;
+  }
 
 .search-bar{
     display: flex;
-    border: solid;
+    width: 90%;
+    border: solid dodgerblue;
     padding: 10px;
     justify-content: space-evenly;
     flex-wrap: wrap;
+    list-style: none;
+}
+.search-bar ul{
+    list-style: none;
 }
