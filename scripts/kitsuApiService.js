@@ -9,23 +9,36 @@
 //anar creant lapartat de cada anime
 const section = document.querySelector(".anime-list");
 
-for (let i = 0; i <= 10; i++){
-  let getAnimes = async (searchString)=>{
-    const response = await fetch(`https://kitsu.io/api/edge/anime/${i + 1}`)
-    const data = await response.json();
-    console.log(data)
-  }
-  getAnimes()
+let getAnimes = async ()=>{
+    const response = await fetch(`https://kitsu.io/api/edge/anime`)
+    const responseJson = await response.json();
+    //console.log(responseJson.data)
+  return responseJson.data;
 }
 
-  // for (let i = 0; i <= 10; i++) {
-  //   try{
-  //     const response = await fetch(`https://kitsu.io/api/edge/anime/${i + 1}`);
-  //     const data = await response.json();
-  //     console.log(data)
-  //   } catch (err){
+
+let listAnime = async () => {
+  const list = await getAnimes(); 
+  let div = document.querySelector(".Top10")
+  let child = document.createElement("div")
+  let counter = 0
+
+  list.forEach(function(anime) {
+    if (anime.attributes.averageRating <= 200){
+      console.log(anime.attributes.averageRating)
       
-  //   }
+      child.innerHTML += `<p>${anime.attributes.titles.en_jp}</p>
+      <img src="${anime.attributes.posterImage.small}"/>`
+      console.log(div)
+    }
+    
+  })
+  
+}
+listAnime();
+
+
+
     
 
 // cada anime tiene toda la info necesaria

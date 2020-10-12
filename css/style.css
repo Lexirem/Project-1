@@ -48,3 +48,17 @@ main{
 .search-bar ul{
     list-style: none;
 }
+
+/* login */
+
+.login h2{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.login-form{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
