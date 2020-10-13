@@ -25,7 +25,7 @@ The **MVP** will cover the following:
 - root/
   - index.html
   - oneAnime.html
-  - faq.html
+  - dashboard.html
   - login.html
   - signup.html
   - css/
