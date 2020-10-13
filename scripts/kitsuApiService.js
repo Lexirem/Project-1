@@ -17,43 +17,58 @@ let getAnimes = async ()=>{
     let responseJson = await response.json();
     // console.log(responseJson)
     animeSet = responseJson.data.map(anime => {
-      dbGeneral.push(anime)
+     // dbGeneral.push(anime)
     })
-    // return dbGeneral;
+     return dbGeneral;
   
   }
-  console.log(dbGeneral)
+  let result = dbGeneral.map(anime=>{
+    let title = anime.attributes.titles.en_jp;
+    let imagen = anime.attributes.posterImage.small;
 
-  // let div = document.querySelector(".Top10")
-  // let child = document.createElement("div")
-    
-    
-  return dbGeneral;
+    let objResult = {
+      title: title,
+      imagen: imagen
+    }
+    return objResult;
+  })
+   console.log(result)
+
+  return result;
 }
-getAnimes();
+// getAnimes();
 
 
-// let listAnime = async () => {
-//   const list = await getAnimes(); 
-//   console.log(list);
-//   let div = document.querySelector(".Top10")
-//   let child = document.createElement("div")
-//   let counter = 0
-
-//   list.forEach(function(anime) {
-//     if (anime.attributes.ratingRank <= 5000){
-//       //console.log(anime.attributes.ratingRank)
-      
-//       child.innerHTML += `<p>${anime.attributes.titles.en_jp}</p>
-//       <img src="${anime.attributes.posterImage.small}"/>`
-//       console.log(div)
-//       div.appendChild(child);
-//     }
-    
-//   })
+function listAnime() {
+  const list = getAnimes(); 
+  console.log(list);
+  let div = document.querySelector(".Top10")
+  // let child = document.createElement("div")
   
-// }
-// listAnime();
+  let stringToPrint = "";
+
+  // // let result = list.forEach(function(anime) {
+  //   // if (anime.attributes.ratingRank <= 5000){
+  //   //   console.log(anime.attributes.ratingRank)
+  //     console.log(stringToPrint)
+  //     console.log(anime)
+  //     return stringToPrint += printAnime(anime)
+  //     // console.log(div)
+  //     // div.appendChild(child);
+  //   // }
+    
+  // })
+  div.innerHTML = stringToPrint;
+}
+listAnime();
+
+function printAnime(anime){
+  return `<p>${anime.attributes.titles.en_jp}</p>
+  <img src="${anime.attributes.posterImage.small}"/>`
+}
+
+
+
 
 // cuando seleccionamos Films:
 // let filmList = async () => {
