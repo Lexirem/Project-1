@@ -24,15 +24,19 @@
 /* cuerpo principal barras busqueda */
 main{
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
     padding: 10%;
 }
 
 .topnav{
+    display: flex;
     float: right;
     padding: 5px;
     border: 1px solid dodgerblue;
     border-radius: 15px;
-    margin: 8px;
+    margin: 10px;
     font-size: 17px;
   }
 
@@ -47,6 +51,12 @@ main{
 }
 .search-bar ul{
     list-style: none;
+}
+.Top10{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
 }
 
 /* login */
@@ -70,6 +80,9 @@ main{
 
 /*responsive */
 @media all and (min-320px){
+    .navbar-brand{
+        width: 20%; 
+    }
     .topnav{
         width: 80%;
         float: right;
@@ -87,5 +100,11 @@ main{
         justify-content: space-evenly;
         flex-wrap: wrap;
         list-style: none;
+    }
+    .Top10{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    
     }
 }
