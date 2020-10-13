@@ -4,7 +4,7 @@
  }
  .nav-container{ 
     display: flex;
-    background-color: rgba(0, 191, 255, 50%);
+    background-color: rgba(0, 191, 255, 0.274);
     justify-content: space-between;
  } 
 .navbar-brand{
@@ -21,7 +21,7 @@
     margin-left: 10px;
 }
 
-/*cuerpo principal */
+/* cuerpo principal barras busqueda */
 main{
     display: flex;
     padding: 10%;
@@ -61,4 +61,31 @@ main{
     align-items: center;
     flex-wrap: wrap;
     justify-content: space-evenly;
+}
+/* faq */
+.faq p{
+    color: dodgerblue;
+}
+
+
+/*responsive */
+@media all and (min-320px){
+    .topnav{
+        width: 80%;
+        float: right;
+        padding: 5px;
+        border: 1px solid dodgerblue;
+        border-radius: 15px;
+        margin: 8px;
+        font-size: 17px;
+    }
+    .search-bar{
+        display: flex;
+        width: 90%;
+        border: solid dodgerblue;
+        padding: 10px;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        list-style: none;
+    }
 }

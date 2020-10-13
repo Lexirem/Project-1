@@ -17,25 +17,26 @@ The **MVP** will cover the following:
 ## Backlog
 
 - Search by category
-- 
-- 
+- Top 10 by ranking
+- Mark favourite anime when LogIn.
 
 ## Data Structure
 
 - root/
   - index.html
-  - animeProj.html
-  - faq.html
-  - register.html
-  - signin.html
+  - oneAnime.html
+  - dashboard.html
+  - login.html
+  - signup.html
   - css/
     - style.css
-  - js/
-    - main.js
+  - scripts/
+    - Database.js
+    - Login.js
     - Signup.js
     - User.js
     - Validator.js
-    - kitsuApi.js
+    - kitsuApiService.js
   - img/
     
 
