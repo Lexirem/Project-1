@@ -24,18 +24,19 @@ The **MVP** will cover the following:
 
 - root/
   - index.html
-  - animeProj.html
+  - oneAnime.html
   - faq.html
-  - register.html
-  - signin.html
+  - login.html
+  - signup.html
   - css/
     - style.css
-  - js/
-    - main.js
+  - scripts/
+    - Database.js
+    - Login.js
     - Signup.js
     - User.js
     - Validator.js
-    - kitsuApi.js
+    - kitsuApiService.js
   - img/
     
 
