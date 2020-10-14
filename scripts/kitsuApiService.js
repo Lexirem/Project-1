@@ -1,11 +1,7 @@
 'use strict';
-// pendiente de modificar
 
-//fetch www....
-//response.json()
-//console.log(data)
+
 //ordenar per rating
-//fer un for amb els 10 primers
 //anar creant lapartat de cada anime
 const section = document.querySelector(".anime-list");
 
@@ -15,76 +11,73 @@ let getAnimes = async ()=>{
   for (let i=0; i< 10; i++){
     let response = await fetch(`https://kitsu.io/api/edge/anime?page%5Blimit%5D=10&page%5Boffset%5D=${i*10}`)
     let responseJson = await response.json();
-    // console.log(responseJson)
-    animeSet = responseJson.data.map(anime => {
-     // dbGeneral.push(anime)
-    })
-     return dbGeneral;
-  
+    dbGeneral.push(responseJson.data)
+    // console.log(responseJson.data)
+    
+    
+    // console.log(animeSet)
   }
-  let result = dbGeneral.map(anime=>{
-    let title = anime.attributes.titles.en_jp;
-    let imagen = anime.attributes.posterImage.small;
 
-    let objResult = {
-      title: title,
-      imagen: imagen
+  for (let i=0; i < 10; i++){
+    for (let j=0; j<10; j++){
+      const animeObj = dbGeneral[i][j]
+      animeSet.push(animeObj) 
     }
-    return objResult;
-  })
-   console.log(result)
+  }
 
-  return result;
+  // console.log(animeSet)
+
+  return animeSet;
+  
 }
 // getAnimes();
 
 
-function listAnime() {
-  const list = getAnimes(); 
+async function listAnime() {
+  const list = await getAnimes(); 
   console.log(list);
   let div = document.querySelector(".Top10")
-  // let child = document.createElement("div")
   
-  let stringToPrint = "";
-
-  // // let result = list.forEach(function(anime) {
-  //   // if (anime.attributes.ratingRank <= 5000){
-  //   //   console.log(anime.attributes.ratingRank)
-  //     console.log(stringToPrint)
-  //     console.log(anime)
-  //     return stringToPrint += printAnime(anime)
-  //     // console.log(div)
-  //     // div.appendChild(child);
-  //   // }
-    
-  // })
-  div.innerHTML = stringToPrint;
+  let result = list.forEach(function(anime){
+    if(anime.attributes.ratingRank < 800){
+      let child = document.createElement("div")
+      child.innerHTML = `<p>${anime.attributes.titles.en_jp}</p>
+    <img src="${anime.attributes.posterImage.small}"/>`
+    div.appendChild(child)
+    } 
+  })
+   
 }
 listAnime();
-
-function printAnime(anime){
-  return `<p>${anime.attributes.titles.en_jp}</p>
-  <img src="${anime.attributes.posterImage.small}"/>`
-}
 
 
 
 
 // cuando seleccionamos Films:
-// let filmList = async () => {
-//   const films = await filmList();
-//   let div = document.querySelector(".Top10")
-//   let child = document.createElement("div")
-//   list.forEach(function(anime){
-//     if(anime.attributes.subtype === movie){
-//       console.log(anime.attributes.subtype)
-//       child.innerHTML += `<p>${anime.attributes.titles.en_jp}</p>
-//       <img src="${anime.attributes.posterImage.small}"/>`
-//     }
-//   })
-// }
-// filmList();
-    
+// let div = document.querySelector(".Top10")
+// // let (anime.attributes.showType === "movie" || anime.attributes.showType === "TV") 
+//   if (movieInput.checked == true) {
+//    //aquí el codig
+//     let child = document.createElement("div")
+//     child.innerHTML = `<p>${anime.attributes.titles.en_jp}</p>
+//      <img src="${anime.attributes.posterImage.small}"/>`
+//     div.appendChild(child)
+//   } else if (serieInput.checked == true) {
+//     //aquí el codig
+//     let child = document.createElement("div")
+//     child.innerHTML = `<p>${anime.attributes.titles.en_jp}</p>
+//      <img src="${anime.attributes.posterImage.small}"/>`
+//     div.appendChild(child)
+//   }
+
+
+//else if(anime.attributes.showType === "movie"){
+    //   let child = document.createElement("div")
+    //   child.innerHTML = `<p>${anime.attributes.titles.en_jp}</p>
+    // <img src="${anime.attributes.posterImage.small}"/>`
+    // div.appendChild(child)
+    // }
+
 // seleccionamos One Anime:
 // let oneAnime = async () => {
 //   let div = document.querySelector(".oneAnime")
