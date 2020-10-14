@@ -59,7 +59,7 @@ listAnime();
 //   if (movieInput.checked == true) {
 //    //aquí el codig
 //     let child = document.createElement("div")
-//     child.innerHTML = `<p>${anime.attributes.titles.en_jp}</p>
+//     return child.innerHTML = `<p>${anime.attributes.titles.en_jp}</p>
 //      <img src="${anime.attributes.posterImage.small}"/>`
 //     div.appendChild(child)
 //   } else if (serieInput.checked == true) {

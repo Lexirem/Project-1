@@ -1,26 +1,39 @@
  /* barra navegacion */
- nav{
-     width: 100%;
+ *{
+     padding:0;
+     margin:0;
+     box-sizing: border-box;
  }
+ 
  .nav-container{ 
     display: flex;
+    width: 100%;
     background-color: rgba(0, 191, 255, 0.274);
     justify-content: space-between;
+    height: auto;
  } 
 .navbar-brand{
-    width: 90px; 
+    width: 90px;
+    margin-right: auto; 
 }
 
 #nav-menu{
     display: flex;
-    justify-content: space-evenly;
-    align-items: flex-end;
+    justify-content: flex-end;
     list-style: none;
+    padding: 5px;
+    align-items: center;
 }
 #nav-menu li{
-    margin-left: 10px;
+    padding: 0 5px;
+    display: inline-flex;
 }
-
+#nav-menu li a{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    text-decoration: none;
+    color: rgb(33, 33, 33, 1);
+}
 /* cuerpo principal barras busqueda */
 main{
     display: flex;
@@ -32,11 +45,11 @@ main{
 
 .topnav{
     display: flex;
-    float: right;
+    width:100%;
     padding: 5px;
     border: 1px solid dodgerblue;
     border-radius: 15px;
-    margin: 10px;
+    margin: 15px auto 30px auto;
     font-size: 17px;
   }
 
@@ -48,8 +61,11 @@ main{
     justify-content: space-evenly;
     flex-wrap: wrap;
     list-style: none;
+    margin-bottom: 10px;
 }
-.search-bar ul{
+.search-bar ul li{
+    display: inline-flex;
+    margin: 3px;
     list-style: none;
 }
 .Top10{
@@ -79,32 +95,6 @@ main{
 
 
 /*responsive */
-@media all and (min-320px){
-    .navbar-brand{
-        width: 20%; 
-    }
-    .topnav{
-        width: 80%;
-        float: right;
-        padding: 5px;
-        border: 1px solid dodgerblue;
-        border-radius: 15px;
-        margin: 8px;
-        font-size: 17px;
-    }
-    .search-bar{
-        display: flex;
-        width: 90%;
-        border: solid dodgerblue;
-        padding: 10px;
-        justify-content: space-evenly;
-        flex-wrap: wrap;
-        list-style: none;
-    }
-    .Top10{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        margin: 10px;
-    }
+@media (min-width: 320px){
+    
 }
