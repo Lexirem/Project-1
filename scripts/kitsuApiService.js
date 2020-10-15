@@ -39,7 +39,7 @@ async function listAnime() {
   let div = document.querySelector(".Top10")
   
   let result = list.forEach(function(anime){
-    if(anime.attributes.ratingRank < 800){
+    if(anime.attributes.ratingRank < 1000){
       let child = document.createElement("div")
       child.innerHTML = `<p>${anime.attributes.titles.en_jp}</p>
     <img src="${anime.attributes.posterImage.small}"/>`
@@ -51,7 +51,7 @@ async function listAnime() {
 listAnime();
 
 
-
+// <a href="oneAnime.html" ><img src="${anime.attributes.posterImage.small/a>
 
 // cuando seleccionamos Films:
 // let div = document.querySelector(".Top10")
@@ -78,12 +78,23 @@ listAnime();
     // div.appendChild(child)
     // }
 
+// let infoImg = () => {
+//   //llamada
+//   // const list = await getAnimes();
+//   // console.log(list);
+//   if(anime.attributes.posterImage === anime.attributes.titles.en_jp){
+
+//   }
+//       let div = document.querySelector(".oneAnime")
+//       let h3 = document.createElement("h3");
+//       h3.innerHTML = //respuesta ed la llamada
+//       div.appendChild(h3)
+//     }
+    
 // seleccionamos One Anime:
 async function oneAnime() {
   const list = await getAnimes(); 
   console.log(list);
-  let div = document.querySelector(".oneAnime")
-  
   let result = list.forEach(function(anime){
     if(anime.attributes.posterImage === "click"){
       let child = document.createElement("div")
