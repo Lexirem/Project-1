@@ -59,7 +59,7 @@ main{
 
 .search-bar{
     display: flex;
-    width: 90%;
+    width: 100%;
     border: solid dodgerblue;
     padding: 10px;
     justify-content: space-evenly;
@@ -67,7 +67,12 @@ main{
     list-style: none;
     margin-bottom: 10px;
 }
-
+.search-bar input{
+    display: flex;
+    width: 20px;
+    height: 10px;
+    margin: 2px;
+}
 .search-bar ul li{
     display: inline-flex;
     margin: 3px;
@@ -89,13 +94,6 @@ main{
     flex-direction: column;
 }
 
-.login-form{
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: space-evenly;
-}
 #email{
     margin: 10px;
 }
@@ -108,7 +106,7 @@ main{
     align-items: center;
     flex-direction: column;
 }
-.signup-form{
+.signup-form, .login-form{
     display: flex;
     flex-direction: column;
 }
@@ -123,7 +121,7 @@ main{
 #repeat-password{
     margin: 10px;
 }
-#signup-button{
+#login-button, #signup-button{
     margin: 10px;
 }
 
@@ -206,7 +204,12 @@ main{
         list-style: none;
         margin-bottom: 10px;
     }
-    
+    .search-bar input{
+        display: flex;
+        width: 20px;
+        height: 15px;
+        margin: 0 5px;
+    }
     .search-bar ul li{
         display: inline-flex;
         margin: 3px;
@@ -227,13 +230,6 @@ main{
         flex-direction: column;
     }
 
-    .login-form{
-        display: flex;
-        align-items: center;
-        flex-wrap: wrap;
-        flex-direction: column;
-        justify-content: space-evenly;
-    }
     .form-wrapper{
         display: flex;
         align-items: center;
@@ -241,31 +237,37 @@ main{
     }
     #name{
         margin: 10px;
-        padding: 5px
+        padding: 10px;
+        font-size: 15px;
     }
     #repeat-password{
         margin: 10px;
-        padding: 5px;
+        padding: 10px;
+        font-size: 15px;
     }
     #email{
         margin: 10px;
-        padding: 5px;
+        padding: 10px;
+        font-size: 15px;
     }
     #password{
         margin: 10px;
-        padding: 5px;
+        padding: 10px;
+        font-size: 15px;
     }
-    #signup-button{
+    #login-button, #signup-button{
         margin: 10px;
-        padding: 5px;
+        padding: 10px;
+        font-size: 15px;
     }
+    
     .signup{
         display: flex;
         color: dodgerblue;
         align-items: center;
         flex-direction: column;
     }
-    .signup-form{
+    .signup-form, .login-form{
         display: flex;
         flex-direction: column;
         width: 300px;
@@ -318,36 +320,76 @@ main{
         text-decoration: none;
         color: rgb(33, 33, 33, 1);
     }
+    .topnav{
+        display: flex;
+        width:100%;
+        padding: 15px;
+        border: 1px solid dodgerblue;
+        border-radius: 15px;
+        margin: 15px auto 30px auto;
+        font-size: 25px;
+    }
+    .search-bar{
+        display: flex;
+        width: 100%;
+        border: solid dodgerblue;
+        padding: 15px;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        list-style: none;
+        margin-bottom: 10px;
+    }
+    .search-bar input{
+        display: flex;
+        width: 30px;
+        height: 25px;
+        margin: 0 5px;
+    }
+    .search-bar ul li{
+        display: inline-flex;
+        margin: 3px;
+        list-style: none;
+        font-size: 20px;
+    }
+    
     .signup{
         display: flex;
         color: dodgerblue;
         align-items: center;
         flex-direction: column;
     }
-    .signup-form{
+    .signup-form, .login-form{
         display: flex;
         flex-direction: column;
         width: 750px;
     }
+    .signup h2, .login h2{
+        font-size: 50px;
+    }
     #name{
         margin: 10px;
-        padding: 10px;
+        padding: 15px;
+        font-size: 25px;
     }
     #repeat-password{
         margin: 10px;
-        padding: 10px;
+        padding: 15px;
+        font-size: 25px;
     }
     #email{
         margin: 10px;
-        padding: 10px;
+        padding: 15px;
+        font-size: 25px;
     }
     #password{
         margin: 10px;
-        padding: 10px;
+        padding: 15px;
+        font-size: 25px;
     }
-    #signup-button{
+    #signup-button, #login-button{
         margin: 10px;
-        padding: 10px;
+        padding: 15px;
+        font-size: 25px;
     }
 
     .faq p{
