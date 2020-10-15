@@ -79,6 +79,11 @@ main{
     list-style: none;
 }
 
+.images {
+    margin: 10px;
+
+}
+
 .Top10{
     display: flex;
     flex-wrap: wrap;

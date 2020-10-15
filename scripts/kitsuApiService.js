@@ -36,16 +36,41 @@ let getAnimes = async ()=>{
 async function listAnime() {
   const list = await getAnimes(); 
   console.log(list);
-  let div = document.querySelector(".Top10")
   
-  let result = list.forEach(function(anime){
-    if(anime.attributes.ratingRank < 1000){
-      let child = document.createElement("div")
-      child.innerHTML = `<p>${anime.attributes.titles.en_jp}</p>
-    <img src="${anime.attributes.posterImage.small}"/>`
-    div.appendChild(child)
-    } 
+  list.map(anime =>{
+    let div = document.querySelector(".Top10")
+    let oneAnimeDiv = document.querySelector(".oneAnime")
+    let img = document.createElement("img")
+    div.appendChild(img);
+    img.setAttribute("src", `${anime.attributes.posterImage.small}`)
+    img.setAttribute("class", "images");
+
+    // let result = list.forEach(function(anime){
+    //   if(anime.attributes.ratingRank < 1000){
+    //     let child = document.createElement("div")
+    //     child.innerHTML = `<p>${anime.attributes.titles.en_jp}</p>
+    //   <img src="${anime.attributes.posterImage.small}"/>`
+    //   div.appendChild(child)
+    //   } 
+    // })
+
+
+    img.addEventListener("click", function(){
+      let divMaked = document.createElement("div");
+      let h3 = document.createElement("h3")
+      h3.innerHTML = `${anime.attributes.titles.en_jp}`
+      divMaked.appendChild(h3);
+
+      let article = document.createElement("article")
+      article.innerHTML =  `${anime.attributes.synopsis}`
+      divMaked.appendChild(article);
+      oneAnimeDiv.innerHTML = "";
+      oneAnimeDiv.appendChild(divMaked);
+    })
+
   })
+  
+  
    
 }
 listAnime();
@@ -78,33 +103,35 @@ listAnime();
     // div.appendChild(child)
     // }
 
-// let infoImg = () => {
-//   //llamada
-//   // const list = await getAnimes();
-//   // console.log(list);
-//   if(anime.attributes.posterImage === anime.attributes.titles.en_jp){
 
-//   }
-//       let div = document.querySelector(".oneAnime")
-//       let h3 = document.createElement("h3");
-//       h3.innerHTML = //respuesta ed la llamada
-//       div.appendChild(h3)
-//     }
     
 // seleccionamos One Anime:
-async function oneAnime() {
-  const list = await getAnimes(); 
-  console.log(list);
-  let result = list.forEach(function(anime){
-    if(anime.attributes.posterImage === "click"){
-      let child = document.createElement("div")
-      child.innerHTML = `<p>${anime.attributes.titles.en_jp}</p>
-    <img src="${anime.attributes.posterImage.small}"/>
-    <article>${anime.attributes.synopsis}</article>`
-    div.appendChild(child)
-    } 
+/*async function oneAnime() {
+  const list = await getAnimes();
+  list.map(anime =>{
+    console.log(anime.attributes.synopsis)
+    let imgSearched = document.querySelector(".secAnime");
+      let h3 = document.createElement("h3")
+      let img = document.createElement("img")
+      let article = document.createElement("article")
+      article.innerHTML =  `${anime.attributes.synopsis}`
+      h3.innerHTML = `${anime.attributes.titles.en_jp}`
+      img.setAttribute("src", `${anime.attributes.posterImage.small}`)
+    
+      imgSearched.appendChild(h3);
+      imgSearched.appendChild(img);
+      imgSearched.appendChild(article);
+    
+    
   })
-}
+}*/
+// let imgSearched = document.querySelector(".oneAnime");
+// imgSearched.addEventListener("click", oneAnime)
+// const list = await getAnimes();
+
 
 // cada anime tiene toda la info necesaria
 // tenemos que añadir el indice al fin de URL de la API
+
+
+
