@@ -79,13 +79,21 @@ listAnime();
     // }
 
 // seleccionamos One Anime:
-// let oneAnime = async () => {
-//   let div = document.querySelector(".oneAnime")
-//   let child = document.createElement("div")
-//   child.innerHTML += `<p>${anime.attributes.titles.en_jp}</p>
-//   <img src="${anime.attributes.posterImage.small}"/>
-//   <article>${anime.attributes.synopsis}</article>`
-// }
+async function oneAnime() {
+  const list = await getAnimes(); 
+  console.log(list);
+  let div = document.querySelector(".oneAnime")
+  
+  let result = list.forEach(function(anime){
+    if(anime.attributes.posterImage === "click"){
+      let child = document.createElement("div")
+      child.innerHTML = `<p>${anime.attributes.titles.en_jp}</p>
+    <img src="${anime.attributes.posterImage.small}"/>
+    <article>${anime.attributes.synopsis}</article>`
+    div.appendChild(child)
+    } 
+  })
+}
 
 // cada anime tiene toda la info necesaria
 // tenemos que añadir el indice al fin de URL de la API
